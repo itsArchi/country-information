@@ -52,8 +52,8 @@ const CountryList = () => {
 
   return (
     <div className="min-h-screen bg-gradient-primary flex flex-col items-center py-10 px-4">
-      <div className="mb-8 flex flex-wrap justify-center gap-4 bg-whiteblue p-3 rounded-lg shadow-md w-full max-w-6xl items-center">
-        <div className="flex items-center gap-4">
+      <div className="mb-8 flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 bg-whiteblue p-3 rounded-lg shadow-md w-full max-w-6xl">
+        <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 w-full sm:w-auto">
           {uniqueContinents.map((continent) => (
             <button
               key={continent}
@@ -69,13 +69,13 @@ const CountryList = () => {
           ))}
         </div>
 
-        <div className="flex-1">
+        <div className="w-full sm:w-auto">
           <input
             type="text"
             placeholder="Search country"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-2 rounded-lg focus:outline-none placeholder:text-sm"
+            className="w-full sm:w-[250px] lg:w-[300px] px-4 py-2 rounded-lg border border-gray-300 focus:outline-none placeholder:text-sm"
           />
         </div>
       </div>
